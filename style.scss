@@ -61,6 +61,13 @@ article {
     padding-right:$standard-padding;
 }
 
+.main-index {
+    article {
+        @include clear-margin-padding;
+        width: 100%;
+    }
+}
+
 aside {
     width: 33.3%;
 }
