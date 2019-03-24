@@ -1,17 +1,27 @@
 $standard-padding: 2em;
+$primary-color: black;
+$secondary-color: gray;
+$highlight-text-color: white;
+$font-family: Arial, Helvetica, sans-serif;
 
-body {
+@mixin clear-margin-padding {
     margin: 0;
     padding: 0;
+}
+
+body {
+    @include clear-margin-padding;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
+    font: {
+        family: $font-family;
+        size: 16px;
+    }
 }
 
 header {
-    background: black;
+    background:$primary-color;
     padding-top:$standard-padding;
-    color: white;
+    color:$highlight-text-color;
 }
 
 header h1 {
@@ -21,9 +31,8 @@ header h1 {
 }
 
 nav ul {
+    @include clear-margin-padding;
     list-style-type: none;
-    padding:0;
-    margin:0;
 }
 
 nav li {
@@ -31,14 +40,14 @@ nav li {
     display: inline-block;
     padding: 10px 30px 15px 30px;
     &:hover {
-        background-color:gray;
+        background-color:$secondary-color;
     }
 }
 
 nav a {
     font-weight: bold;
     text-decoration: none;
-    color: white;
+    color:$highlight-text-color;
 }
 
 main {
@@ -63,41 +72,43 @@ img {
 .img-container {
     display: block;
     overflow: hidden;
-}
-
-article img {
-    margin-bottom: -50%;
+    img {
+        margin-bottom: -50%;
+    }
 }
 
 footer {
-    color: white;
+    color:$highlight-text-color;
     padding:$standard-padding;
-    background-color: gray;
+    background-color:$secondary-color;
 }
 
 @media all and (max-width: 800px) {
     header {
         text-align: center;
+        h1 {
+            padding: 0;
+        }
+        nav li {
+            display: block;
+        }
     }
-    header h1 {
-        padding: 0;
-    }
-    nav li {
-        display: block;
-    }
+
     main {
         flex-wrap: wrap;
+        article { 
+            width: 100%;
+            padding: 0;
+            h2 {
+                text-align: center;
+            }
+        }
+        figure {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        aside {
+            width: 100%; 
+        }
     }
-    figure {
-        margin-left: 0;
-        margin-right: 0;
-    }
-    article h2 {
-        text-align: center;
-    }
-    article { 
-        width: 100%;
-        padding: 0;
-    }
-    aside { width: 100%; }
   }
