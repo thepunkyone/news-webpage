@@ -45,6 +45,15 @@ img {
     width: 100%;
 }
 
+.img-container {
+    display: block;
+    overflow: hidden;
+}
+
+article img {
+    margin-bottom: -500px;
+}
+
 footer {
     padding: 2em;
 }
