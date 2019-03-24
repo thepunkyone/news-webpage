@@ -34,7 +34,7 @@ nav a {
 
 main {
   display: flex;
-  flex-direction: row;
+  flex-flow: row;
   padding: 2em; }
 
 article {
@@ -52,11 +52,38 @@ img {
   overflow: hidden; }
 
 article img {
-  margin-bottom: -500px; }
+  margin-bottom: -50%; }
 
 footer {
   color: white;
   padding: 2em;
   background-color: gray; }
+
+@media all and (max-width: 800px) {
+  header {
+    text-align: center; }
+
+  header h1 {
+    padding: 0; }
+
+  nav li {
+    display: block; }
+
+  main {
+    flex-wrap: wrap; }
+
+  figure {
+    margin-left: 0;
+    margin-right: 0; }
+
+  article h2 {
+    text-align: center; }
+
+  article {
+    width: 100%;
+    padding: 0; }
+
+  aside {
+    width: 100%; } }
 
 /*# sourceMappingURL=style.css.map */
