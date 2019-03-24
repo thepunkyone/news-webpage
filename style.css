@@ -1,59 +1,56 @@
 body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px; }
 
 header {
-    background: black;
-    padding: 2em;
-    color: white;
-}
+  background: black;
+  padding-top: 2em;
+  color: white; }
+
+header h1 {
+  font-size: 2.5em;
+  padding-left: 30px;
+  margin-bottom: 0; }
 
 nav ul {
-    list-style-type: none;
-    padding:0;
-}
+  list-style-type: none;
+  padding: 0;
+  margin: 0; }
 
 nav li {
-    display: inline-block;
-    padding-right: 1em;
-}
+  font-size: 1.5em;
+  display: inline-block;
+  padding: 20px 30px; }
 
 nav a {
-    color: white;
-}
+  color: white; }
 
 main {
-    display: flex;
-    flex-direction:row;
-    padding: 2em;
-}
+  display: flex;
+  flex-direction: row;
+  padding: 2em; }
 
 article {
-    width: 66.6%;
-    padding-right: 2em;
-}
+  width: 66.6%;
+  padding-right: 2em; }
 
 aside {
-    width: 33.3%;
-}
+  width: 33.3%; }
 
 img {
-    width: 100%;
-}
+  width: 100%; }
 
 .img-container {
-    display: block;
-    overflow: hidden;
-}
+  display: block;
+  overflow: hidden; }
 
 article img {
-    margin-bottom: -500px;
-}
+  margin-bottom: -500px; }
 
 footer {
-    padding: 2em;
-}
+  padding: 2em; }
+
+/*# sourceMappingURL=style.css.map */
