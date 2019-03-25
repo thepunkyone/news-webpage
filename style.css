@@ -103,6 +103,18 @@ footer {
       margin-left: 0;
       margin-right: 0; }
     main aside {
-      width: 100%; } }
+      width: 100%; }
+
+  .main-index h3 {
+    text-align: center; }
+  .main-index figure {
+    padding: 0;
+    width: 100%; }
+  .main-index .news-preview-text {
+    width: 100%; }
+  .main-index button {
+    width: 100%;
+    font-size: 1.2em;
+    border-radius: 0; } }
 
 /*# sourceMappingURL=style.css.map */

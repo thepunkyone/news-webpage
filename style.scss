@@ -149,4 +149,22 @@ footer {
             width: 100%; 
         }
     }
+
+    .main-index {
+        h3 {
+            text-align: center;
+        }
+        figure {
+            padding: 0;
+            width: 100%;
+        }
+        .news-preview-text {
+            width:100%;
+        }
+        button {
+            width: 100%;
+            font-size:1.2em;
+            border-radius: 0;
+        }
+    }
   }
