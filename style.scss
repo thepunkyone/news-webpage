@@ -9,6 +9,10 @@ $font-family: Arial, Helvetica, sans-serif;
     padding: 0;
 }
 
+@mixin color-fade {
+    transition: background-color 0.5s ease;
+}
+
 @mixin button {
     text-transform: uppercase;
     background-color:$secondary-color;
@@ -16,6 +20,7 @@ $font-family: Arial, Helvetica, sans-serif;
     border-radius:0.3em;
     border: none;
     padding:0.5em 1em 0.5em 1em;
+    @include color-fade;
     &:hover {
         cursor: pointer;
         background-color:$primary-color;
@@ -50,7 +55,7 @@ nav {
     li {
         font-size:1.3em;
         display: inline-block;
-        padding: 10px 30px 15px 30px;
+        @include color-fade;
         &:hover {
             background-color:$secondary-color;
             cursor: pointer;
@@ -58,6 +63,7 @@ nav {
     }
     a {
         display: block;
+        padding: 10px 30px 15px 30px;
         font-weight: bold;
         text-decoration: none;
         color:$highlight-text-color;
