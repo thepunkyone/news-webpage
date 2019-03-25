@@ -62,9 +62,28 @@ article {
 }
 
 .main-index {
+    section {
+        display: flex;
+        flex-flow: row wrap;
+    }
     article {
         @include clear-margin-padding;
         width: 100%;
+    }
+    figure {
+        @include clear-margin-padding;
+        padding-right:$standard-padding;
+        width: 40%;
+        height: 300px;
+        overflow: hidden;
+    }
+    .news-preview-text {
+        width: calc(60% - 2em);
+        button {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
 }
 
