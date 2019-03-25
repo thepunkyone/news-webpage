@@ -9,25 +9,24 @@ header {
   background: black;
   padding-top: 2em;
   color: white; }
-
-header h1 {
-  font-size: 2.5em;
-  padding-left: 30px;
-  margin-bottom: 15px; }
+  header h1 {
+    font-size: 2.5em;
+    padding-left: 30px;
+    margin-bottom: 15px; }
 
 nav ul {
   margin: 0;
   padding: 0;
   list-style-type: none; }
-
 nav li {
   font-size: 1.3em;
   display: inline-block;
   padding: 10px 30px 15px 30px; }
   nav li:hover {
-    background-color: gray; }
-
+    background-color: gray;
+    cursor: pointer; }
 nav a {
+  display: block;
   font-weight: bold;
   text-decoration: none;
   color: white; }
@@ -57,8 +56,16 @@ article {
   overflow: hidden; }
 .main-index .news-preview-text {
   width: calc(60% - 2em); }
-  .main-index .news-preview-text button:hover {
-    cursor: pointer; }
+.main-index button {
+  text-transform: uppercase;
+  background-color: gray;
+  color: white;
+  border-radius: 0.3em;
+  border: none;
+  padding: 0.5em 1em 0.5em 1em; }
+  .main-index button:hover {
+    cursor: pointer;
+    background-color: black; }
 
 aside {
   width: 33.3%; }

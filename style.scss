@@ -9,6 +9,19 @@ $font-family: Arial, Helvetica, sans-serif;
     padding: 0;
 }
 
+@mixin button {
+    text-transform: uppercase;
+    background-color:$secondary-color;
+    color:$highlight-text-color;
+    border-radius:0.3em;
+    border: none;
+    padding:0.5em 1em 0.5em 1em;
+    &:hover {
+        cursor: pointer;
+        background-color:$primary-color;
+    }
+}
+
 body {
     @include clear-margin-padding;
     box-sizing: border-box;
@@ -22,32 +35,33 @@ header {
     background:$primary-color;
     padding-top:$standard-padding;
     color:$highlight-text-color;
-}
-
-header h1 {
-    font-size:2.5em;
-    padding-left:30px;
-    margin-bottom: 15px;
-}
-
-nav ul {
-    @include clear-margin-padding;
-    list-style-type: none;
-}
-
-nav li {
-    font-size:1.3em;
-    display: inline-block;
-    padding: 10px 30px 15px 30px;
-    &:hover {
-        background-color:$secondary-color;
+    h1 {
+        font-size:2.5em;
+        padding-left:30px;
+        margin-bottom: 15px;
     }
 }
 
-nav a {
-    font-weight: bold;
-    text-decoration: none;
-    color:$highlight-text-color;
+nav {
+    ul {
+        @include clear-margin-padding;
+        list-style-type: none;
+    }
+    li {
+        font-size:1.3em;
+        display: inline-block;
+        padding: 10px 30px 15px 30px;
+        &:hover {
+            background-color:$secondary-color;
+            cursor: pointer;
+        }
+    }
+    a {
+        display: block;
+        font-weight: bold;
+        text-decoration: none;
+        color:$highlight-text-color;
+    }
 }
 
 main {
@@ -79,11 +93,9 @@ article {
     }
     .news-preview-text {
         width: calc(60% - 2em);
-        button {
-            &:hover {
-                cursor: pointer;
-            }
-        }
+    }
+    button {
+        @include button;
     }
 }
 
